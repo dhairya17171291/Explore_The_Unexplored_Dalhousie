@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Unexplored Dalhousie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+        }
+        header {
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .places {
+            max-width: 900px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .place {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .place img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .place h2 {
+            margin: 0.5rem 0 0.2rem 0;
+            font-size: 1.3rem;
+        }
+        .place p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .contact {
+            max-width: 500px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        .contact h3 {
+            margin-top: 0;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin: 0.5rem 0 1rem 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .contact button {
+            background: #3a7bd5;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background: #00d2ff;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            color: #888;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore the Unexplored Dalhousie</h1>
+        <p>Discover hidden gems and breathtaking places in Dalhousie</p>
+    </header>
+    <section class="places">
+        <div class="place">
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <img src="attachment_2.jpg" alt="Khajjiar Lake" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment_3.jpg" alt="Khajjiar Collage" style="width:100%;max-width:320px;border-radius:8px;">
+            </div>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Khajjiar">
+            <h2>Khajjiar</h2>
+            <p>
+                The Mini Switzerland of India, with lush meadows and forests. Khajjiar is famous for its adventure activities like paragliding and horse riding. Many visitors come here to enjoy the thrill, plan picnics, and soak in the breathtaking scenery. It's a perfect spot for families, friends, and adventure seekers alike.
+            </p>
+        </div>
+        <div class="place">
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <img src="attachment_4.jpg" alt="Dainkund Green View" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment_5.jpg" alt="Dainkund Snow View" style="width:100%;max-width:320px;border-radius:8px;">
+            </div>
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Dainkund Peak">
+            <h2>Dainkund Peak</h2>
+            <p>
+                Highest point in Dalhousie, offering panoramic views and serene beauty. At the summit, you'll find the sacred "Pohlani Mata Temple" and Asia's biggest radar system, making it a unique blend of spirituality and technology.
+            </p>
+        </div>
+        <div class="place">
+            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Kalatop Wildlife Sanctuary">
+            <h2>Kalatop Wildlife Sanctuary</h2>
+            <p>
+                Dense forests, wildlife, and peaceful walking trails. The trek to the top takes about 15-20 minutes uphill, rewarding you with beautiful views of the valley and surrounding mountains.
+            </p>
+        </div>
+        <div class="place">
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <img src="attachment_0.jpg" alt="Panchpula Nature View" style="width:100%;max-width:220px;border-radius:8px;">
+                <img src="attachment_1.jpg" alt="Panchpula Waterfall" style="width:100%;max-width:220px;border-radius:8px;">
+            </div>
+            <h2>Panchpula</h2>
+            <p>
+                Picturesque spot with waterfalls and streams, perfect for picnics.
+            </p>
+        </div>
+        <div class="place">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mystic Village Khajjiar">
+            <h2>Mystic Village (Hidden Gem)</h2>
+            <p>
+                Experience the thrill of off-roading through the wild beauty of Kalatop Wildlife Sanctuary as you make your way to Mystic Village near Khajjiar. This untouched haven reveals stunning natural crafts—twisted trees, mossy stones, and vibrant wildflowers shaped by nature itself. The journey is as breathtaking as the destination, making Mystic Village a true unexplored gem for adventurers and nature lovers alike.
+                <strong>Explore the Unexplored!</strong>
+            </p>
+        </div>
+        <!-- Add more places below! Example:
+        <div class="place">
+            <h2>GPO (Gandhi Chowk)</h2>
+            <p>
+                The heart of Dalhousie town, GPO is a lively spot with shops, cafes, and colonial architecture. It's a great place to stroll, shop for souvenirs, and enjoy the local vibe.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Khirdi Dhar (near Banikhet)</h2>
+            <p>
+                A scenic ridge near Banikhet, Khirdi Dhar offers panoramic views and peaceful walking trails. It's perfect for those seeking tranquility and natural beauty away from the crowds.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Chamera Dam Boating Point</h2>
+            <p>
+                Enjoy boating and breathtaking views at Chamera Dam. The serene waters surrounded by hills make it a popular spot for adventure and relaxation.
+            </p>
+        </div>
+        <div class="place">
+            <h2>Bhali Mata Temple (near Chamera Dam)</h2>
+            <p>
+                Located close to Chamera Dam, Bhali Mata Temple is a revered spiritual site. The temple is surrounded by natural beauty and offers a peaceful atmosphere for visitors.
+            </p>
+        </div>
+        <div class="place">
+            <img src="URL_TO_IMAGE" alt="PLACE_NAME">
+            <h2>PLACE_NAME</h2>
+            <p>Short description of the place.</p>
+        </div>
+        -->
+    </section>
+    <section class="trip-plan" style="max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;">
+        <h3>Smart 3-Day Dalhousie Trip Plan</h3>
+        <ol style="font-size:1.1rem;">
+            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest after your journey.</li>
+            <li><strong>Day 2:</strong> Visit <b>Khajjiar</b> (Mini Switzerland of India) for adventure activities and picnics. Explore <b>Mystic Village</b> (Hidden Gem) nearby. At night, enjoy the vibrant atmosphere at <b>GPO Market (Mall Road)</b> and local cafes.</li>
+            <li><strong>Day 3:</strong> Head to <b>Chamera Dam</b> for boating and breathtaking views. Visit <b>Bhali Mata Temple</b> near the dam. In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
+            <li><strong>Day 4:</strong> Visit <b>Dainkund Peak</b> for panoramic views and the sacred <b>Pohlani Mata Temple</b>. Then explore <b>Kalatop Wildlife Sanctuary</b> and <b>Panchpula</b> for its waterfalls and natural beauty. Spend your last evening strolling along <b>Garam Sadak</b> and enjoying the peaceful atmosphere.</li>
+        </ol>
+        <button onclick="window.location.href='https://www.hptdc.in/index.php/dalhousie/'" style="background:#3a7bd5;color:#fff;border:none;padding:0.8rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;margin-top:1rem;">See More Trip Options</button>
+    </section>
+    <section class="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        &copy; 2025 Explore the Unexplored Dalhousie. All rights reserved.<br>
+        Founder: Dhairya Shama
+    </footer>
+</body>
+</html>
