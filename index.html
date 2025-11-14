@@ -91,6 +91,50 @@
             color: #888;
             font-size: 0.95rem;
         }
+        .travel-agents {
+            max-width: 700px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        .travel-agents table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+        }
+        .travel-agents th, .travel-agents td {
+            padding: 0.7rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .travel-agents th {
+            background: #f5f7fa;
+        }
+        .travel-agents a {
+            color: #3a7bd5;
+            text-decoration: underline;
+        }
+        .hotel-stays {
+            max-width: 700px;
+            margin: 3rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        .hotel-stays table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+        }
+        .hotel-stays th, .hotel-stays td {
+            padding: 0.7rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .hotel-stays th {
+            background: #f5f7fa;
+        }
     </style>
 </head>
 <body>
@@ -101,8 +145,8 @@
     <section class="places">
         <div class="place">
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                <img src="attachment_2.jpg" alt="Khajjiar Lake" style="width:100%;max-width:320px;border-radius:8px;">
-                <img src="attachment_3.jpg" alt="Khajjiar Collage" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment2.jpg" alt="Khajjiar Lake" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment3.jpg" alt="Khajjiar Collage" style="width:100%;max-width:320px;border-radius:8px;">
             </div>
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Khajjiar">
             <h2>Khajjiar</h2>
@@ -112,8 +156,8 @@
         </div>
         <div class="place">
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                <img src="attachment_4.jpg" alt="Dainkund Green View" style="width:100%;max-width:320px;border-radius:8px;">
-                <img src="attachment_5.jpg" alt="Dainkund Snow View" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment4.jpg" alt="Dainkund Green View" style="width:100%;max-width:320px;border-radius:8px;">
+                <img src="attachment5.jpg" alt="Dainkund Snow View" style="width:100%;max-width:320px;border-radius:8px;">
             </div>
             <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Dainkund Peak">
             <h2>Dainkund Peak</h2>
@@ -125,13 +169,13 @@
             <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Kalatop Wildlife Sanctuary">
             <h2>Kalatop Wildlife Sanctuary</h2>
             <p>
-                Dense forests, wildlife, and peaceful walking trails. The trek to the top takes about 15-20 minutes uphill, rewarding you with beautiful views of the valley and surrounding mountains.
+                Dense forests, wildlife, and peaceful walking trails. The trek to the top is an offroad journey of about 15-20 minutes, rewarding you with beautiful views of the valley and surrounding mountains.
             </p>
         </div>
         <div class="place">
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-                <img src="attachment_0.jpg" alt="Panchpula Nature View" style="width:100%;max-width:220px;border-radius:8px;">
-                <img src="attachment_1.jpg" alt="Panchpula Waterfall" style="width:100%;max-width:220px;border-radius:8px;">
+                <img src="attachment0.jpg" alt="Panchpula Nature View" style="width:100%;max-width:220px;border-radius:8px;">
+                <img src="attachment1.jpg" alt="Panchpula Waterfall" style="width:100%;max-width:220px;border-radius:8px;">
             </div>
             <h2>Panchpula</h2>
             <p>
@@ -178,8 +222,31 @@
         </div>
         -->
     </section>
-    <section class="trip-plan" style="max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;">
+    <!-- Trip Plan Buttons -->
+    <section id="trip-plan-2" class="trip-plan" style="display:none;max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;color:#111;">
+        <h3 style="color:#000;">Smart 2-Day Dalhousie Trip Plan</h3>
+        <ol style="font-size:1.1rem;color:#000;">
+            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in, visit <b>Khajjiar</b> and <b>Panchpula</b>.</li>
+            <li><strong>Day 2:</strong> Explore <b>Dainkund Peak</b> and <b>Kalatop Wildlife Sanctuary</b>. Evening at <b>GPO Market</b>.</li>
+        </ol>
+    </section>
+    <section class="trip-plan-selector" style="max-width:700px;margin:2rem auto;text-align:center;">
+        <button onclick="showTripPlan(2)" style="background:#3a7bd5;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1rem;cursor:pointer;margin:0 0.5rem 1rem 0;">Plan 2-Day Trip</button>
+        <button onclick="showTripPlan(3)" style="background:#3a7bd5;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1rem;cursor:pointer;margin:0 0.5rem 1rem 0;">Plan 3-Day Trip</button>
+        <button onclick="showTripPlan(4)" style="background:#3a7bd5;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1rem;cursor:pointer;margin:0 0.5rem 1rem 0;">Plan 4-Day Trip</button>
+    </section>
+    <!-- Trip Plans -->
+    <section id="trip-plan-3" class="trip-plan" style="display:none;max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;">
         <h3>Smart 3-Day Dalhousie Trip Plan</h3>
+        <ol style="font-size:1.1rem;">
+            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest after your journey.</li>
+            <li><strong>Day 2:</strong> Visit <b>Khajjiar</b> (Mini Switzerland of India) for adventure activities and picnics. Explore <b>Mystic Village</b> (Hidden Gem) nearby. At night, enjoy the vibrant atmosphere at <b>GPO Market (Mall Road)</b> and local cafes.</li>
+            <li><strong>Day 3:</strong> Head to <b>Chamera Dam</b> for boating and breathtaking views. Visit <b>Bhali Mata Temple</b> near the dam. In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
+        </ol>
+        <button onclick="window.location.href='https://www.hptdc.in/index.php/dalhousie/'" style="background:#3a7bd5;color:#fff;border:none;padding:0.8rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;margin-top:1rem;">See More Trip Options</button>
+    </section>
+    <section id="trip-plan-4" class="trip-plan" style="display:none;max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;">
+        <h3>Smart 4-Day Dalhousie Trip Plan</h3>
         <ol style="font-size:1.1rem;">
             <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest after your journey.</li>
             <li><strong>Day 2:</strong> Visit <b>Khajjiar</b> (Mini Switzerland of India) for adventure activities and picnics. Explore <b>Mystic Village</b> (Hidden Gem) nearby. At night, enjoy the vibrant atmosphere at <b>GPO Market (Mall Road)</b> and local cafes.</li>
@@ -188,6 +255,15 @@
         </ol>
         <button onclick="window.location.href='https://www.hptdc.in/index.php/dalhousie/'" style="background:#3a7bd5;color:#fff;border:none;padding:0.8rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;margin-top:1rem;">See More Trip Options</button>
     </section>
+    <script>
+    function showTripPlan(days) {
+        document.getElementById('trip-plan-2').style.display = days === 2 ? 'block' : 'none';
+        document.getElementById('trip-plan-3').style.display = days === 3 ? 'block' : 'none';
+        document.getElementById('trip-plan-4').style.display = days === 4 ? 'block' : 'none';
+    }
+    // Show 3-day plan by default
+    window.onload = function() { showTripPlan(3); };
+    </script>
     <section class="contact">
         <h3>Contact Us</h3>
         <form>
@@ -196,6 +272,87 @@
             <textarea rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+    </section>
+    <section class="travel-agents">
+        <h3>Recommended Travel Agents & Taxi Services</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent/Taxi Name</th>
+                    <th>Contact</th>
+                    <th>Service Type</th>
+                    <th>Approx. Rate</th>
+                    <th>Book Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Prince_Travels</td>
+                    <td>*************</td>
+                    <td>Local Sightseeing</td>
+                    <td>₹1200/day</td>
+                    <td><a href="tel:+919876543210">Call Now</a></td>
+                </tr>
+                <tr>
+                    <td>Dalhosuie_taxi_union</td>
+                    <td>+91-*********</td>
+                    <td>Taxi + Guide</td>
+                    <td>₹1800/day</td>
+                    <td><a href="tel:+919123456789">Call Now</a></td>
+                </tr>
+                <tr>
+                    <td>tour_and_travels</td>
+                    <td>+91-*********</td>
+                    <td>Taxi Service</td>
+                    <td>₹1000/day</td>
+                    <td><a href="tel:+919988776655">Call Now</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>All listed agents are trusted partners of Explore the Unexplored Dalhousie. Rates are approximate and may vary. Please confirm before booking.</p>
+    </section>
+    <section class="hotel-stays">
+        <h3>Recommended Hotel Stays in Dalhousie</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hotel Name</th>
+                    <th>Starting Price</th>
+                    <th>Special Features</th>
+                    <th>Book/Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dalhousie Inn</td>
+                    <td>₹2000/night</td>
+                    <td>Comfortable rooms, central location</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>Ravi View</td>
+                    <td>₹2000/night</td>
+                    <td>Balcony views, scenic location</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <td>Mount View</td>
+                    <td>10000</td>
+                    <td>Balacony views, scenic location </td>
+                    <td>contact number</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top:2rem;">
+            <h4>Ideas for More Hotels to Add:</h4>
+            <ul style="color:#555;">
+                <li>Hotel Name</li>
+                <li>Starting Price</li>
+                <li>Special Features</li>
+                <li>Contact/Booking Info</li>
+            </ul>
+            <p style="color:#888;font-size:0.95rem;">Add more hotels here as you discover or get recommendations!</p>
+        </div>
     </section>
     <footer>
         &copy; 2025 Explore the Unexplored Dalhousie. All rights reserved.<br>
