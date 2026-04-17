@@ -9,135 +9,233 @@
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            background: #f5f7fa;
+            background: url('Screenshot 2026-01-02 at 7.08.42\u202FPM.png') no-repeat center center fixed;
+            background-size: cover;
             color: #222;
+            position: relative;
+            min-height: 100vh;
+        }
+        /* Glassmorphism overlay */
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(30, 41, 59, 0.55);
+            z-index: 0;
+            pointer-events: none;
+        }
+        header, .places, .trip-plan, .trip-plan-selector, .travel-agents, .hotel-stays, .contact {
+            position: relative;
+            z-index: 1;
         }
         header {
-            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            background: rgba(58,123,213,0.85);
             color: #fff;
-            padding: 2rem 0 1rem 0;
+            padding: 2.5rem 0 1.5rem 0;
             text-align: center;
+            border-radius: 0 0 32px 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            margin-bottom: 1.5rem;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.18);
         }
         header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
+            font-size: 1.25rem;
+            margin-top: 0.7rem;
+            color: #e0f7fa;
+            text-shadow: 0 1px 8px rgba(0,0,0,0.12);
         }
         .places {
-            max-width: 900px;
-            margin: 2rem auto;
+            max-width: 1100px;
+            margin: 2.5rem auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2.2rem;
         }
         .place {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 1.5rem;
+            background: rgba(255,255,255,0.65);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(58,123,213,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+            padding: 1.7rem 1.2rem 1.5rem 1.2rem;
             text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+            backdrop-filter: blur(7px);
+        }
+        .place:hover {
+            box-shadow: 0 8px 32px rgba(58,123,213,0.18), 0 2px 12px rgba(0,0,0,0.10);
+            transform: translateY(-6px) scale(1.03);
+            background: rgba(255,255,255,0.82);
         }
         .place img {
             width: 100%;
             max-width: 220px;
-            border-radius: 8px;
+            border-radius: 10px;
             margin-bottom: 1rem;
+            box-shadow: 0 2px 12px rgba(58,123,213,0.10);
         }
         .place h2 {
             margin: 0.5rem 0 0.2rem 0;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
+            color: #2563eb;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         .place p {
-            font-size: 1rem;
-            color: #555;
+            font-size: 1.05rem;
+            color: #333;
         }
-        .contact {
-            max-width: 500px;
-            margin: 3rem auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 2rem;
+        .trip-plan, .trip-plan-selector, .travel-agents, .hotel-stays, .contact {
+            background: rgba(255,255,255,0.68);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(58,123,213,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+            backdrop-filter: blur(7px);
         }
-        .contact h3 {
-            margin-top: 0;
+        .trip-plan, .travel-agents, .hotel-stays, .contact {
+            padding: 2.2rem 2rem;
+        }
+        .trip-plan-selector {
+            padding: 1.2rem 2rem 1.5rem 2rem;
+        }
+        .trip-plan h3, .travel-agents h3, .hotel-stays h3 {
+            color: #00b4d8;
+            letter-spacing: 1px;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+        .trip-plan button, .trip-plan-selector button, .contact button {
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+            color: #fff;
+            border: none;
+            padding: 0.85rem 2.1rem;
+            border-radius: 8px;
+            font-size: 1.08rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 0.5rem 1rem 0;
+            box-shadow: 0 2px 8px rgba(58,123,213,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+        }
+        .trip-plan button:hover, .trip-plan-selector button:hover, .contact button:hover {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(58,123,213,0.18);
         }
         .contact input, .contact textarea {
             width: 100%;
-            padding: 0.7rem;
+            padding: 0.8rem;
             margin: 0.5rem 0 1rem 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-        .contact button {
-            background: #3a7bd5;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .contact button:hover {
-            background: #00d2ff;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            color: #888;
-            font-size: 0.95rem;
-        }
-        .travel-agents {
-            max-width: 700px;
-            margin: 3rem auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 2rem;
-        }
-        .travel-agents table {
-            width: 100%;
-            border-collapse: collapse;
+            border: 1.5px solid #b6e0fe;
+            border-radius: 8px;
             font-size: 1.05rem;
+            background: rgba(255,255,255,0.85);
+            transition: border 0.2s, box-shadow 0.2s;
         }
-        .travel-agents th, .travel-agents td {
-            padding: 0.7rem;
-            border-bottom: 1px solid #ddd;
+        .contact input:focus, .contact textarea:focus {
+            border: 1.5px solid #3a7bd5;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(58,123,213,0.10);
         }
-        .travel-agents th {
-            background: #f5f7fa;
+        .travel-agents table, .hotel-stays table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 1.08rem;
+            background: rgba(250,253,255,0.92);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
         }
-        .travel-agents a {
+        .travel-agents th, .hotel-stays th {
+            color: #2563eb;
+            font-weight: 700;
+            background: rgba(0,212,255,0.10);
+            padding: 0.7em 0.5em;
+        }
+        .travel-agents td, .hotel-stays td {
+            color: #222;
+            padding: 0.7em 0.5em;
+            border-bottom: 1px solid #e3e9f0;
+        }
+        .travel-agents tr:last-child td, .hotel-stays tr:last-child td {
+            border-bottom: none;
+        }
+        .travel-agents a, .hotel-stays a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3em;
+            font-weight: 600;
             color: #3a7bd5;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .travel-agents a:hover, .hotel-stays a:hover {
+            color: #00b4d8;
             text-decoration: underline;
         }
-        .hotel-stays {
-            max-width: 700px;
-            margin: 3rem auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 2rem;
+        .hotel-stays h4 {
+            margin-top: 2rem;
+            color: #2563eb;
+            font-size: 1.1rem;
         }
-        .hotel-stays table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 1.05rem;
+        .hotel-stays ul {
+            margin: 0.5rem 0 0 1.2rem;
+            padding: 0;
         }
-        .hotel-stays th, .hotel-stays td {
-            padding: 0.7rem;
-            border-bottom: 1px solid #ddd;
+        .hotel-stays li {
+            margin-bottom: 0.3rem;
         }
-        .hotel-stays th {
-            background: #f5f7fa;
+        /* Section divider */
+        section:not(:last-child) {
+            border-bottom: 1.5px solid #e3e9f0;
+        }
+        /* Animation */
+        .place, .trip-plan, .travel-agents, .hotel-stays, .contact {
+            opacity: 0;
+            animation: fadeInUp 0.7s forwards;
+        }
+        .place { animation-delay: 0.1s; }
+        .trip-plan { animation-delay: 0.2s; }
+        .travel-agents { animation-delay: 0.3s; }
+        .hotel-stays { animation-delay: 0.4s; }
+        .contact { animation-delay: 0.5s; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Responsive tweaks */
+        @media (max-width: 900px) {
+            .places { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            header { font-size: 1.1rem; border-radius: 0 0 18px 18px; }
+            .places { grid-template-columns: 1fr; gap: 1.2rem; }
+            .trip-plan, .trip-plan-selector, .travel-agents, .hotel-stays, .contact {
+                padding: 1.2rem 0.7rem;
+            }
+        }
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100vw;
+            height: 4px;
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            z-index: 100;
+            opacity: 0.7;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s;
         }
     </style>
 </head>
 <body>
+    <div class="bg-overlay"></div>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
     <header>
         <h1>Explore the Unexplored Dalhousie</h1>
         <p>Discover hidden gems and breathtaking places in Dalhousie</p>
@@ -182,12 +280,86 @@
                 Picturesque spot with waterfalls and streams, perfect for picnics.
             </p>
         </div>
+        <!-- Mystic Village (Hidden Gem) -->
+        <div class="place">
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
+                <img src="img1.jpg" alt="Mystic Village - Main View" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+                <img src="3 2.jpg" alt="Mystic Village - Alternate View" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+                <img src="3 3.jpeg" alt="Mystic Village - Nature" style="width:100%;max-width:220px;border-radius:10px;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+            </div>
+            <h2>Mystic Village (Hidden Gem)</h2>
+            <p>
+                Experience the thrill of off-roading through the wild beauty of Kalatop Wildlife Sanctuary as you make your way to Mystic Village near Khajjiar. This untouched haven reveals stunning natural crafts—twisted trees, mossy stones, and vibrant wildflowers shaped by nature itself. The journey is as breathtaking as the destination, making Mystic Village a true unexplored gem for adventurers and nature lovers alike.
+                <strong>Explore the Unexplored!</strong>
+            </p>
+        </div>
+        <div class="place">
+            <img src="3 3.jpeg" alt="Khajjiar - Scenic View" style="width:100%;max-width:220px;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+            <img src="attachment2.jpg" alt="Khajjiar Lake" style="width:100%;max-width:320px;border-radius:8px;">
+            <img src="attachment3.jpg" alt="Khajjiar Collage" style="width:100%;max-width:320px;border-radius:8px;">
+            <h2>Khajjiar</h2>
+            <p>
+                The Mini Switzerland of India, with lush meadows and forests. Khajjiar is famous for its adventure activities like paragliding and horse riding. Many visitors come here to enjoy the thrill, plan picnics, and soak in the breathtaking scenery. It's a perfect spot for families, friends, and adventure seekers alike.
+            </p>
+        </div>
+        <div class="place">
+            <img src="2nd image 2.jpg" alt="Dainkund Peak - Snow Covered" style="width:100%;max-width:220px;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+            <img src="4.jpg" alt="Dainkund Trek" style="width:100%;max-width:220px;border-radius:10px;margin-bottom:1rem;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+            <img src="attachment4.jpg" alt="Dainkund Green View" style="width:100%;max-width:320px;border-radius:8px;">
+            <img src="attachment5.jpg" alt="Dainkund Snow View" style="width:100%;max-width:320px;border-radius:8px;">
+            <h2>Dainkund Peak</h2>
+            <p>
+                Highest point in Dalhousie, offering panoramic views and serene beauty. At the summit, you'll find the sacred "Pohlani Mata Temple" and Asia's biggest radar system, making it a unique blend of spirituality and technology.
+            </p>
+        </div>
         <div class="place">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mystic Village Khajjiar">
             <h2>Mystic Village (Hidden Gem)</h2>
             <p>
                 Experience the thrill of off-roading through the wild beauty of Kalatop Wildlife Sanctuary as you make your way to Mystic Village near Khajjiar. This untouched haven reveals stunning natural crafts—twisted trees, mossy stones, and vibrant wildflowers shaped by nature itself. The journey is as breathtaking as the destination, making Mystic Village a true unexplored gem for adventurers and nature lovers alike.
                 <strong>Explore the Unexplored!</strong>
+            </p>
+        </div>
+        <div class="place">
+            <img src="khirdi_dhar.jpg" alt="Khirdi Dhar Viewpoint">
+            <h2>Khirdi Dhar Viewpoint</h2>
+            <p>
+                A secret ridgeline called 'God's balcony' by locals. One of the finest sunset points in Himachal with 360° views of the Pir Panjal ranges, Jammu hills, and Punjab plains. Absolute solitude and breathtaking golden hour.
+            </p>
+        </div>
+        <div class="place">
+            <img src="ganji_pahadi.jpg" alt="Ganji Pahadi Trek">
+            <h2>Ganji Pahadi Trek</h2>
+            <p>
+                A raw ridgeline trail to a bald hilltop meadow. Wild alpine flowers in spring, unobstructed sky, and true solitude. Suitable for beginners and best combined with Khirdi Dhar for a hidden gems day.
+            </p>
+        </div>
+        <div class="place">
+            <img src="satdhara_falls.jpg" alt="Satdhara Falls">
+            <h2>Satdhara Falls</h2>
+            <p>
+                Seven natural spring streams believed to have healing properties. A serene, meditative spot surrounded by rhododendrons, just 2 km from Dalhousie town.
+            </p>
+        </div>
+        <div class="place">
+            <img src="subhash_baoli.jpg" alt="Subhash Baoli">
+            <h2>Subhash Baoli</h2>
+            <p>
+                Where Subhash Chandra Bose meditated in 1937. A peaceful garden with mountain valley views and a tranquil stream, just a short walk from Gandhi Chowk.
+            </p>
+        </div>
+        <div class="place">
+            <img src="st_francis_church.jpg" alt="St. Francis Church">
+            <h2>St. Francis Church</h2>
+            <p>
+                175-year-old colonial Gothic church with Belgian stained glass and beautiful gardens. Built in 1894, it's a peaceful spot for quiet reflection in the heart of Dalhousie.
+            </p>
+        </div>
+        <div class="place">
+            <img src="bakrota_hills.jpg" alt="Bakrota Hills Circuit">
+            <h2>Bakrota Hills Circuit</h2>
+            <p>
+                A 5 km circular walk between Gandhi Chowk and Subhash Chowk with stunning Pir Panjal views. Best at sunrise and sunset, passing colonial-era bungalows and viewpoints.
             </p>
         </div>
         <!-- Add more places below! Example:
@@ -226,7 +398,7 @@
     <section id="trip-plan-2" class="trip-plan" style="display:none;max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;color:#111;">
         <h3 style="color:#000;">Smart 2-Day Dalhousie Trip Plan</h3>
         <ol style="font-size:1.1rem;color:#000;">
-            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in, visit <b>Khajjiar</b> and <b>Panchpula</b>.</li>
+            <li><strong>Day 1:</strong> Visit <b>Khajjiar</b> and <b>Panchpula</b>. At Night after returning from<b>Panchpula</b> Vist<b>GPO,&,Mall Road Market</b></li>
             <li><strong>Day 2:</strong> Explore <b>Dainkund Peak</b> and <b>Kalatop Wildlife Sanctuary</b>. Evening at <b>GPO Market</b>.</li>
         </ol>
     </section>
@@ -241,19 +413,29 @@
         <ol style="font-size:1.1rem;">
             <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest after your journey.</li>
             <li><strong>Day 2:</strong> Visit <b>Khajjiar</b> (Mini Switzerland of India) for adventure activities and picnics. Explore <b>Mystic Village</b> (Hidden Gem) nearby. At night, enjoy the vibrant atmosphere at <b>GPO Market (Mall Road)</b> and local cafes.</li>
-            <li><strong>Day 3:</strong> Head to <b>Chamera Dam</b> for boating and breathtaking views. Visit <b>Bhali Mata Temple</b> near the dam. In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
+            <li><strong>Day 3:</strong> Head to <b>Chamera Dam</b> for boating and breathtaking views. Visit <b>Bhalai Mata Temple</b> near the dam. In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
         </ol>
         <button onclick="window.location.href='https://www.hptdc.in/index.php/dalhousie/'" style="background:#3a7bd5;color:#fff;border:none;padding:0.8rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;margin-top:1rem;">See More Trip Options</button>
     </section>
     <section id="trip-plan-4" class="trip-plan" style="display:none;max-width:700px;margin:3rem auto;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2rem;">
         <h3>Smart 4-Day Dalhousie Trip Plan</h3>
         <ol style="font-size:1.1rem;">
-            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest after your journey.</li>
+            <li><strong>Day 1:</strong> Arrive in Dalhousie, check in to your hotel, and take rest.</li>
             <li><strong>Day 2:</strong> Visit <b>Khajjiar</b> (Mini Switzerland of India) for adventure activities and picnics. Explore <b>Mystic Village</b> (Hidden Gem) nearby. At night, enjoy the vibrant atmosphere at <b>GPO Market (Mall Road)</b> and local cafes.</li>
-            <li><strong>Day 3:</strong> Head to <b>Chamera Dam</b> for boating and breathtaking views. Visit <b>Bhali Mata Temple</b> near the dam. In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
-            <li><strong>Day 4:</strong> Visit <b>Dainkund Peak</b> for panoramic views and the sacred <b>Pohlani Mata Temple</b>. Then explore <b>Kalatop Wildlife Sanctuary</b> and <b>Panchpula</b> for its waterfalls and natural beauty. Spend your last evening strolling along <b>Garam Sadak</b> and enjoying the peaceful atmosphere.</li>
+            <li><strong>Day 3:</strong> Visit<b>Dainkund Peak</b> for panoramic views and the sacred <b>Pohlani Mata Temple</b>. Then on returning back from Dainkund, visit <b>Kalatop Wildlife Sanctuary</b> and <b>Panchpula</b> for its waterfalls and natural beauty.</li>
+            <li><strong>Day 4:</strong> Head to <b>Chamera Dam</b>for boating and breathtaking views.Visit <b>Bhalai Mata Temple</b>near the dam .In the evening, experience a beautiful sunset at <b>Khirdi Dhar</b>, the best spot for photos.</li>
         </ol>
         <button onclick="window.location.href='https://www.hptdc.in/index.php/dalhousie/'" style="background:#3a7bd5;color:#fff;border:none;padding:0.8rem 2rem;border-radius:6px;font-size:1rem;cursor:pointer;margin-top:1rem;">See More Trip Options</button>
+    </section>
+    <section class="dalhousie-map" style="max-width:900px;margin:3rem auto 2rem auto;background:rgba(255,255,255,0.68);border-radius:18px;box-shadow:0 4px 24px rgba(58,123,213,0.10),0 1.5px 6px rgba(0,0,0,0.08);backdrop-filter:blur(7px);padding:2.2rem 2rem;">
+        <h3 style="color:#00b4d8;letter-spacing:1px;font-size:1.35rem;font-weight:700;text-align:center;">Explore Dalhousie: Interactive Tourist Map</h3>
+        <p style="text-align:center;font-size:1.08rem;color:#333;margin-bottom:1.5rem;">Find all major attractions, hidden gems, and routes at a glance. Click markers for info and directions!</p>
+        <div style="width:100%;height:420px;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(58,123,213,0.10);">
+            <iframe
+                src="https://www.google.com/maps/d/embed?mid=1tDjuPf1aB_ceQkmGAFnmm2IMnUJ49dQ&hl=en" 
+                width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p style="text-align:center;color:#888;font-size:0.98rem;margin-top:1.1rem;">Tip: Use the map controls to zoom, switch layers, or get directions to any spot!</p>
     </section>
     <script>
     function showTripPlan(days) {
@@ -263,6 +445,13 @@
     }
     // Show 3-day plan by default
     window.onload = function() { showTripPlan(3); };
+    // Scroll indicator animation
+    window.addEventListener('scroll', function() {
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollTop = window.scrollY;
+        var percent = docHeight ? (scrollTop / docHeight) : 0;
+        document.getElementById('scrollIndicator').style.transform = 'scaleX(' + percent + ')';
+    });
     </script>
     <section class="contact">
         <h3>Contact Us</h3>
@@ -286,13 +475,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Prince_Travels</td>
-                    <td>*************</td>
-                    <td>Local Sightseeing</td>
-                    <td>₹1200/day</td>
-                    <td><a href="tel:+919876543210">Call Now</a></td>
-                </tr>
                 <tr>
                     <td>Dalhosuie_taxi_union</td>
                     <td>+91-*********</td>
@@ -336,10 +518,10 @@
                     <td>--</td>
                 </tr>
                 <tr>
-                    <td>Mount View</td>
-                    <td>10000</td>
-                    <td>Balacony views, scenic location </td>
-                    <td>contact number</td>
+                    <td>Sagrika Resort</td>
+                    <td>₹2500/night</td>
+                    <td>Modern amenities, family-friendly, close to Mall Road</td>
+                    <td><a href="https://www.sagrikaresortdalhousie.com/" target="_blank" rel="noopener" style="color:#3a7bd5;font-weight:600;text-decoration:none;">Book Now</a></td>
                 </tr>
             </tbody>
         </table>
@@ -353,6 +535,15 @@
             </ul>
             <p style="color:#888;font-size:0.95rem;">Add more hotels here as you discover or get recommendations!</p>
         </div>
+    </section>
+    <section class="guide-info" style="max-width:700px;margin:3rem auto;background:rgba(255,255,255,0.68);border-radius:18px;box-shadow:0 4px 24px rgba(58,123,213,0.10),0 1.5px 6px rgba(0,0,0,0.08);backdrop-filter:blur(7px);padding:2.2rem 2rem;">
+        <h3 style="color:#00b4d8;letter-spacing:1px;font-size:1.35rem;font-weight:700;">Recommended Local Guide</h3>
+        <p style="font-size:1.1rem;color:#222;margin-bottom:1.2rem;">For a more authentic and insightful experience in Dalhousie, you can contact our trusted local guide:</p>
+        <ul style="list-style:none;padding:0;font-size:1.08rem;">
+            <li><strong>Mobile:</strong> <a href="tel:+918219747425" style="color:#3a7bd5;font-weight:600;text-decoration:none;">+91 82197 47425</a></li>
+            <li><strong>Mobile:</strong> <a href="tel:+919882709691" style="color:#3a7bd5;font-weight:600;text-decoration:none;">+91 98827 09691</a></li>
+        </ul>
+        <p style="color:#888;font-size:0.98rem;margin-top:1.2rem;">Feel free to call for personalized tours, trekking, and local insights!</p>
     </section>
     <footer>
         &copy; 2025 Explore the Unexplored Dalhousie. All rights reserved.<br>
